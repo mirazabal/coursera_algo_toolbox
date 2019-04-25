@@ -7,32 +7,24 @@ compare_func a b
          | a < b = LT
          | otherwise = GT
 
-sortLines :: [(Int, Int)] -> [(Int, Int)]
-sortLines (x:xs) 
-         | fst a < fst b = LT
-         | fst a == fst b = compare_func snd a snd b 
-         | otherwise = GT
+quicksort :: (Ord a) => [(a,a)] -> [(a,a)]
+quicksort [] = []
+quicksort (x:xs) = quicksort [y | y <- xs, y <= x] ++ [x] ++ quicksort [y | y <- xs, y > x]
+
 
 commonPoints :: [(Int, Int)] -> (Int, Int) -> [Int]
-commonPoints [] common = fst common
+commonPoints [] common = return (fst common) 
 commonPoints (x:xs) common 
-        | fst x > snd common = commonPoints xs x  ++ snd common 
+        | fst x > snd common = (snd common):commonPoints xs x  
         | fst x >= fst common = if snd x < snd common    
-                                then commonPoints xs (fst x, snd common) 
-                                else commonPoints xs (fst x, snd x)
+                                then commonPoints xs (fst x, snd x) 
+                                else commonPoints xs (fst x, snd common)
         | otherwise = commonPoints xs common 
 
-
 optimal_points :: [(Int, Int)] -> [Int]
-optimal_points segments = 
-          let sortedLines = sortLines segments
-              points = commonPoints tail sortedLines head sortedLines 
-          in points
---map fst segments -- write your code here
-
-
---sortBy xxx [1,2,3,4,5,6,7]
-
+optimal_points segments = --quicksort segments
+          let sortedLines = quicksort segments
+					in	commonPoints (tail sortedLines) (head sortedLines)
 
 main :: IO ()
 main = do
