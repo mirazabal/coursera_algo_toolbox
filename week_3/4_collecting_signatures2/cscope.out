@@ -1,0 +1,353 @@
+cscope 15 $HOME/workspace/coursera_algo_toolbox/week_3/4_collecting_signatures               0000001567
+	@covering_segments.cpp
+
+1 
+	~<®gÜ™hm
+>
+
+2 
+	~<io¡»am
+>
+
+3 
+	~<şim™s
+>
+
+4 
+	~<veùÜ
+>
+
+6 
+usšg
+ 
+	g¡d
+::
+veùÜ
+;
+
+8 
+	sSegm’t
+ {
+
+9 
+	m¡¬t
+, 
+	m’d
+;
+
+12 
+	gveùÜ
+<> 
+İtim®_pošts
+(
+veùÜ
+<
+Segm’t
+> &
+£gm’ts
+) {
+
+13 
+	gveùÜ
+<> 
+	gpošts
+;
+
+15 
+	g¡d
+::
+sÜt
+(
+¡d
+::
+begš
+(
+£gm’ts
+),¡d::
+’d
+(£gm’ts), []×utØcÚ¡& 
+s1
+,‡utØcÚ¡& 
+s2
+)
+
+17 if(
+s1
+.
+¡¬t
+ < 
+s2
+.start)
+
+18  
+Œue
+;
+
+19 if(
+s1
+.
+¡¬t
+ =ğ
+s2
+.start)
+
+20  
+s1
+.
+’d
+ < 
+s2
+.end;
+
+22  
+çl£
+;
+
+24 autØ
+	g™
+ = 
+¡d
+::
+begš
+(
+£gm’ts
+);
+
+25 
+Segm’t
+ 
+	gcommÚ_£gm’t
+;
+
+26 
+	gcommÚ_£gm’t
+.
+	g¡¬t
+ = 
+™
+->
+¡¬t
+;
+
+27 
+	gcommÚ_£gm’t
+.
+	g’d
+ = 
+™
+->
+’d
+;
+
+28 
+	g¡d
+::
+advªû
+(
+™
+,1);
+
+29 
+	g™
+ !ğ
+¡d
+::
+’d
+(
+£gm’ts
+)){
+
+30 if(
+™
+->
+¡¬t
+ > 
+commÚ_£gm’t
+.
+’d
+){
+
+31 
+pošts
+.
+em¶aû_back
+(
+’d
+);
+
+32 
+	g¡¬t
+ = 
+™
+->
+¡¬t
+;
+
+33 
+	g’d
+ = 
+™
+->
+’d
+;
+
+34 } iàĞ
+	g™
+->
+	g¡¬t
+ >ğ
+commÚ_£gm’t
+.
+¡¬t
+ ){
+
+35 
+commÚ_£gm’t
+.
+¡¬t
+ = 
+™
+->start;
+
+36 if(
+	g™
+->
+	g’d
+ < 
+	gcommÚ_£gm’t
+.end){
+
+37 
+	gcommÚ_£gm’t
+.
+	g’d
+ = 
+™
+->
+’d
+;
+
+40 
+	g¡d
+::
+advªû
+(
+™
+,1);
+
+43 
+	gpošts
+.
+em¶aû_back
+(
+commÚ_£gm’t
+.
+’d
+);
+
+72  
+	gpošts
+;
+
+75 
+	$maš
+() {
+
+76 
+n
+;
+
+77 
+¡d
+::
+cš
+ >> 
+n
+;
+
+78 
+veùÜ
+<
+Segm’t
+> 
+	`£gm’ts
+(
+n
+);
+
+79 
+size_t
+ 
+i
+ = 0; i < 
+£gm’ts
+.
+	`size
+(); ++i) {
+
+80 
+¡d
+::
+cš
+ >> 
+£gm’ts
+[
+i
+].
+¡¬t
+ >> segm’ts[i].
+’d
+;
+
+82 
+veùÜ
+<> 
+pošts
+ = 
+	`İtim®_pošts
+(
+£gm’ts
+);
+
+83 
+¡d
+::
+cout
+ << 
+pošts
+.
+	`size
+() << "\n";
+
+84 
+size_t
+ 
+i
+ = 0; i < 
+pošts
+.
+	`size
+(); ++i) {
+
+85 
+¡d
+::
+cout
+ << 
+pošts
+[
+i
+] << " ";
+
+87 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+1
+22
+covering_segments.cpp
