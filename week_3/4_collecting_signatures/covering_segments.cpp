@@ -42,33 +42,6 @@ vector<int> optimal_points(vector<Segment> &segments) {
 
   points.emplace_back(common_segment.end);
 
-/*
-  auto it = std::begin(segments);
-  while(it != std::end(segments)){ 
-    auto it_2 = std::find_if(it,std::end(segments), [=](auto& seg){
-                                                          
-                                                          
-                                                          if(seg.start > it->end)
-                                                            return true;
-                                                          if(seg.end < it->end)
-                                                            return true;
-                                                          return false;
-                                                          } );
-   points.emplace_back(it->end);
-    it = it_2;
-  }
-*/
-  //    auto it_2 = std::upper_bound(it, std::end(segments), it->end, []( auto it_3, auto val ) { 
-//        if(it_3->start > val) 
-//          return true;
-//        return false;
-//        }  );
-    
- 
-//  for (size_t i = 0; i < segments.size(); ++i) {
-//    points.push_back(segments[i].start);
-//    points.push_back(segments[i].end);
-// }
   return points;
 }
 
