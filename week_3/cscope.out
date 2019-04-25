@@ -1,0 +1,912 @@
+cscope 15 $HOME/workspace/coursera_algo_toolbox/week_3               0000003931
+	@1-money_change/change.cpp
+
+1 
+	~<io¡»am
+>
+
+4 
+	g‹m¶©e
+<
+ty³Çme
+ 
+	gT
+>
+
+5 
+T
+ 
+	$g‘_chªge_‹mp
+(
+T
+&& 
+v®
+)
+
+9 
+	}
+};
+
+12 
+	$g‘_chªge
+(
+m
+) {
+
+13 
+numb”Cošs
+{0};
+
+14 
+m
+ >= 10){
+
+15 
+m
+-=10;
+
+16 ++
+numb”Cošs
+;
+
+18 
+m
+ >= 5){
+
+19 
+m
+-=5;
+
+20 ++
+numb”Cošs
+;
+
+22 
+m
+ >= 1){
+
+23 
+m
+-=1;
+
+24 ++
+numb”Cošs
+;
+
+26  
+numb”Cošs
+;
+
+29 
+	}
+}
+
+31 
+	$maš
+() {
+
+32 
+m
+;
+
+33 
+¡d
+::
+cš
+ >> 
+m
+;
+
+34 
+¡d
+::
+cout
+ << 
+	`g‘_chªge
+(
+m
+) << '\n';
+
+35 
+	}
+}
+
+	@2-loot/fractional_knapsack.cpp
+
+1 
+	~<®gÜ™hm
+>
+
+2 
+	~<io¡»am
+>
+
+3 
+	~<veùÜ
+>
+
+5 
+usšg
+ 
+	g¡d
+::
+veùÜ
+;
+
+7 
+	sObjeùs
+
+
+9 
+	mv®ues
+;
+
+10 
+	mweigths
+;
+
+11 
+Objeùs
+(
+v®
+ = 0, 
+wei
+ = 0è: 
+v®ues
+{v®}, 
+	mweigths
+{
+	mwei
+}
+
+17 
+g‘_İtim®_v®ue
+(
+ÿ·c™y
+, 
+veùÜ
+<
+Objeùs
+>& 
+obj
+) {
+
+19 
+	gv®ue
+ = 0.0;
+
+21 
+	g¡d
+::
+sÜt
+(
+¡d
+::
+begš
+(
+obj
+), std::
+’d
+(obj), []×utØcÚ¡& 
+a
+,‡utØcÚ¡ &
+b
+ )
+
+23  (
+a
+.
+v®ues
+)/×.
+weigths
+è> (
+b
+.values)/(b.weigths);
+
+26 autØ
+	g™
+ = 
+¡d
+::
+begš
+(
+obj
+);
+
+27 
+	gÿ·c™y
+ !ğ0 && 
+™
+ !ğ
+¡d
+::
+’d
+(
+obj
+)){
+
+28 if(
+™
+->
+weigths
+ <ğ
+ÿ·c™y
+){
+
+29 
+v®ue
+ +ğ
+™
+->
+v®ues
+;
+
+30 
+	gÿ·c™y
+ -ğ
+™
+->
+weigths
+;
+
+32 
+	gv®ue
+ +ğ
+ÿ·c™y
+ * ((
+™
+->
+v®ues
+)/(™->
+weigths
+));
+
+33 
+	gÿ·c™y
+ = 0;
+
+35 
+	g™
+ = 
+¡d
+::
+Ãxt
+(
+™
+);
+
+38  
+	gv®ue
+;
+
+41 
+	$maš
+() {
+
+42 
+n
+;
+
+43 
+ÿ·c™y
+;
+
+44 
+¡d
+::
+cš
+ >> 
+n
+ >> 
+ÿ·c™y
+;
+
+45 
+veùÜ
+<
+Objeùs
+> 
+	`obj
+(
+n
+);
+
+46 
+i
+ = 0; i < 
+n
+; i++) {
+
+47 
+v®
+, 
+weig
+;
+
+48 
+¡d
+::
+cš
+ >> 
+v®
+ >> 
+weig
+;
+
+49 
+obj
+.
+	`em¶aû_back
+(
+	`Objeùs
+(
+v®
+,
+weig
+));
+
+52 
+İtim®_v®ue
+ = 
+	`g‘_İtim®_v®ue
+Ğ
+ÿ·c™y
+, 
+obj
+);
+
+54 
+¡d
+::
+cout
+.
+	`´ecisiÚ
+(10);
+
+55 
+¡d
+::
+cout
+ << 
+İtim®_v®ue
+ << std::
+’dl
+;
+
+57 
+	}
+}
+
+	@3-advertisement_revenue/dot_product.cpp
+
+1 
+	~<®gÜ™hm
+>
+
+2 
+	~<io¡»am
+>
+
+3 
+	~<veùÜ
+>
+
+5 
+usšg
+ 
+	g¡d
+::
+veùÜ
+;
+
+7 
+max_dÙ_´oduù
+(
+veùÜ
+<> 
+a
+, veùÜ<> 
+b
+)
+
+10 
+	g¡d
+::
+sÜt
+(
+¡d
+::
+begš
+(
+a
+),¡d::
+’d
+×),¡d::
+g»©”
+<>());
+
+11 
+	g¡d
+::
+sÜt
+(
+¡d
+::
+begš
+(
+b
+),¡d::
+’d
+(b),¡d::
+g»©”
+<>());
+
+13 
+	g¡d
+::
+ŒªsfÜm
+(
+¡d
+::
+begš
+(
+a
+), std::
+’d
+×), std::begš(
+b
+), std::begš×), std::
+muÉl›s
+<>());
+
+14  
+	g¡d
+::
+accumuÏ‹
+(
+¡d
+::
+begš
+(
+a
+),¡d::
+’d
+(a),0l);
+
+17 
+	$maš
+() {
+
+18 
+size_t
+ 
+n
+;
+
+19 
+¡d
+::
+cš
+ >> 
+n
+;
+
+20 
+veùÜ
+<> 
+	`a
+(
+n
+), 
+	`b
+(n);
+
+21 
+size_t
+ 
+i
+ = 0; i < 
+n
+; i++) {
+
+22 
+¡d
+::
+cš
+ >> 
+a
+[
+i
+];
+
+24 
+size_t
+ 
+i
+ = 0; i < 
+n
+; i++) {
+
+25 
+¡d
+::
+cš
+ >> 
+b
+[
+i
+];
+
+27 
+¡d
+::
+cout
+ << 
+	`max_dÙ_´oduù
+(
+a
+, 
+b
+è<< std::
+’dl
+;
+
+28 
+	}
+}
+
+	@4_collecting_signatures/covering_segments.cpp
+
+1 
+	~<®gÜ™hm
+>
+
+2 
+	~<io¡»am
+>
+
+3 
+	~<şim™s
+>
+
+4 
+	~<veùÜ
+>
+
+6 
+usšg
+ 
+	g¡d
+::
+veùÜ
+;
+
+8 
+	sSegm’t
+ {
+
+9 
+	m¡¬t
+, 
+	m’d
+;
+
+12 
+	gveùÜ
+<> 
+İtim®_pošts
+(
+veùÜ
+<
+Segm’t
+> &
+£gm’ts
+) {
+
+13 
+	gveùÜ
+<> 
+	gpošts
+;
+
+15 
+	g¡d
+::
+sÜt
+(
+¡d
+::
+begš
+(
+£gm’ts
+),¡d::
+’d
+(£gm’ts), []×utØcÚ¡& 
+s1
+,‡utØcÚ¡& 
+s2
+)
+
+17 if(
+s1
+.
+¡¬t
+ < 
+s2
+.start)
+
+18  
+Œue
+;
+
+19 if(
+s1
+.
+¡¬t
+ =ğ
+s2
+.start)
+
+20  
+s1
+.
+’d
+ < 
+s2
+.end;
+
+22  
+çl£
+;
+
+24 autØ
+	g™
+ = 
+¡d
+::
+begš
+(
+£gm’ts
+);
+
+25 
+Segm’t
+ 
+	gcommÚ_£gm’t
+;
+
+26 
+	gcommÚ_£gm’t
+.
+	g¡¬t
+ = 
+™
+->
+¡¬t
+;
+
+27 
+	gcommÚ_£gm’t
+.
+	g’d
+ = 
+™
+->
+’d
+;
+
+28 
+	g¡d
+::
+advªû
+(
+™
+,1);
+
+29 
+	g™
+ !ğ
+¡d
+::
+’d
+(
+£gm’ts
+)){
+
+30 if(
+™
+->
+¡¬t
+ > 
+commÚ_£gm’t
+.
+’d
+){
+
+31 
+pošts
+.
+em¶aû_back
+(
+’d
+);
+
+32 
+	g¡¬t
+ = 
+™
+->
+¡¬t
+;
+
+33 
+	g’d
+ = 
+™
+->
+’d
+;
+
+34 } iàĞ
+	g™
+->
+	g¡¬t
+ >ğ
+commÚ_£gm’t
+.
+¡¬t
+ ){
+
+35 
+commÚ_£gm’t
+.
+¡¬t
+ = 
+™
+->start;
+
+36 if(
+	g™
+->
+	g’d
+ < 
+	gcommÚ_£gm’t
+.end){
+
+37 
+	gcommÚ_£gm’t
+.
+	g’d
+ = 
+™
+->
+’d
+;
+
+40 
+	g¡d
+::
+advªû
+(
+™
+,1);
+
+43 
+	gpošts
+.
+em¶aû_back
+(
+commÚ_£gm’t
+.
+’d
+);
+
+72  
+	gpošts
+;
+
+75 
+	$maš
+() {
+
+76 
+n
+;
+
+77 
+¡d
+::
+cš
+ >> 
+n
+;
+
+78 
+veùÜ
+<
+Segm’t
+> 
+	`£gm’ts
+(
+n
+);
+
+79 
+size_t
+ 
+i
+ = 0; i < 
+£gm’ts
+.
+	`size
+(); ++i) {
+
+80 
+¡d
+::
+cš
+ >> 
+£gm’ts
+[
+i
+].
+¡¬t
+ >> segm’ts[i].
+’d
+;
+
+82 
+veùÜ
+<> 
+pošts
+ = 
+	`İtim®_pošts
+(
+£gm’ts
+);
+
+83 
+¡d
+::
+cout
+ << 
+pošts
+.
+	`size
+() << "\n";
+
+84 
+size_t
+ 
+i
+ = 0; i < 
+pošts
+.
+	`size
+(); ++i) {
+
+85 
+¡d
+::
+cout
+ << 
+pošts
+[
+i
+] << " ";
+
+87 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+4
+143
+1-money_change/change.cpp
+2-loot/fractional_knapsack.cpp
+3-advertisement_revenue/dot_product.cpp
+4_collecting_signatures/covering_segments.cpp

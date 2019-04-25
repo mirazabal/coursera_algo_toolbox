@@ -1,45 +1,34 @@
 -- by Kirill Elagin
+
 import Control.Monad (replicateM)
 import Numeric (showFFloat)
-import Data.List
 
+import Data.Function (on)
+import Data.List (sortBy)
 
-data Item = Int Int
+type Item = (Int, Int)
 
-value :: Item -> Int  
-value (Item value _ ) = value  
+foo :: Int -> Int -> Double
+foo a b = fromIntegral(a) / fromIntegral(b)
 
-weight :: Item -> Int  
-weight (Item _ weight) = weight  
-
-
-quicksort :: [Item] -> [Item]  
-quicksort [] = []  
-quicksort (x:xs) =   
-    let smallerSorted = quicksort [Item | Item <- xs, ((value Item) / (weight Item) ) <= ((value x) / (weight x)) ]  
-        biggerSorted = quicksort [Item | Item <- xs, (value Item) / (weight Item) > (value x) / (weight x) ]  
-    in  smallerSorted ++ [x] ++ biggerSorted 
-
+fooItem ::  Item -> Double
+fooItem item = fromIntegral( fst(item)) / fromIntegral( snd(item))
 
 get_optimal_value :: Int -> [Item] -> Double
-get_optimal_value 0 items = 0 
---get_optimal_value capacity [] = 0 
---get_optimal_value capacity items = value + Item.first + get_optimal_value (capacity - Item.second) items
+get_optimal_value 0 _ = 0 
+get_optimal_value capacity (x:xs) 
+  | capacity > snd(x) =  fromIntegral (fst(x)) +  get_optimal_value (capacity-snd(x)) xs
+  | otherwise = (fromIntegral capacity) * fooItem x   
 
-intermediate_func :: Int -> [Item] -> Double 
-intermediate_func capacity items = do
-  ordered_items <- quicksort items
-	get_optimal_value 0 ordered_items	
-  
-
-
---get_optimal_value capacity items = value + Item.first + get_optimal_value (capacity - Item.second) items
 
 main :: IO ()
 main = do
   [n', capacity'] <- fmap words getLine
   let (n, capacity) = (read n', read capacity')
   items <- replicateM n $ fmap ((\[v, w] -> (read v, read w)) . words) getLine
-  printFloat $ intermediate_func capacity items
+
+  let sortItems = sortBy ( (flip compare) `on` fooItem ) items  
+  printFloat $ get_optimal_value capacity sortItems
  where
   printFloat x = putStrLn $ showFFloat (Just 4) x ""
+
